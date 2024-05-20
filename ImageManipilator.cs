@@ -18,7 +18,7 @@ namespace Yu_Gi_Oh_Card_Translator
         static string fontNameTypePath3 = AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Anticva2.ttf";
         static string fontDescPath = AppDomain.CurrentDomain.BaseDirectory + @"Fonts\Italic1.ttf";
 
-        public static async Task PrepareText(List<Card> cards)
+        public static async Task DrawText(List<Card> cards)
         {
             Dictionary<string, string> spellType = new Dictionary<string, string>
             {
@@ -79,8 +79,6 @@ namespace Yu_Gi_Oh_Card_Translator
                 });
                 await img.SaveAsJpegAsync(@$"{CacheDir}\Cards\{card.Code}.jpg");
             }
-            Console.WriteLine("DONE");
-
         }
 
         private static RichTextOptions[] CreateOptions(Card card, (PointF type, PointF description) cordinates)
