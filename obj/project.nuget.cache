@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "152pPsk57N5gvaeOyRPd56OCZRsx/hC7+pRSvyXkzJDp+aucjE5NilQQUdwYmV6AF47kz7XxPGQIz4/H9tmnEg==",
+  "dgSpecHash": "wjnfLclxT2RO4VAgDK86yah0sx4wQu5nKKaWYag7Y2Vba+P65s18jNSh6HbyL3BlMAR0PlGpaqOp7yZ+o6Nsvg==",
   "success": true,
-  "projectFilePath": "d:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj",
+  "projectFilePath": "D:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dr34mRunn3r\\.nuget\\packages\\cairosharp\\3.24.24.95\\cairosharp.3.24.24.95.nupkg.sha512",
     "C:\\Users\\Dr34mRunn3r\\.nuget\\packages\\htmlagilitypack\\1.11.60\\htmlagilitypack.1.11.60.nupkg.sha512",

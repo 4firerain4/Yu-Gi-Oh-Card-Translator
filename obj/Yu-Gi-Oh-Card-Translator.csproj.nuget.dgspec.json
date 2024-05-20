@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj": {}
+    "D:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj": {}
   },
   "projects": {
-    "d:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj": {
+    "D:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj",
+        "projectUniqueName": "D:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj",
         "projectName": "Yu-Gi-Oh-Card-Translator",
-        "projectPath": "d:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj",
+        "projectPath": "D:\\WORK\\Yu-Gi-Oh-Card-Translator\\Yu-Gi-Oh-Card-Translator.csproj",
         "packagesPath": "C:\\Users\\Dr34mRunn3r\\.nuget\\packages\\",
-        "outputPath": "d:\\WORK\\Yu-Gi-Oh-Card-Translator\\obj\\",
+        "outputPath": "D:\\WORK\\Yu-Gi-Oh-Card-Translator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dr34mRunn3r\\AppData\\Roaming\\NuGet\\NuGet.Config"
