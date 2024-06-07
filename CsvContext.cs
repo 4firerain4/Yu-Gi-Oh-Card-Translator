@@ -29,7 +29,7 @@ namespace Yu_Gi_Oh_Card_Translator
             var lines = File.ReadAllLines(DataDir + "\\data.csv");
             var cards = lines.Select(line =>
             {
-                var columns = line.Split('\t').Select(column => column.Trim('\"').Trim().Replace('^','\n')).ToArray();
+                var columns = line.Split('\t').Select(column => column.Trim('\"').Trim().Replace('^','\n').Replace('ё','е')).ToArray();
                 return new Card
                 {
                     Code = columns[0],

@@ -7,8 +7,8 @@ namespace Yu_Gi_Oh_Card_Translator
 
         static async Task Main(string[] args)
         {
-            var a = new StreamReader(@"D:\WORK\Yu-Gi-Oh-Card-Translator\my deck 1.ydk");
-            string[] unsortedCodes = a.ReadToEnd().Split("\r\n");
+            var deckPath = new StreamReader(AppContext.BaseDirectory +@"my deck 1.ydk");
+            string[] unsortedCodes = deckPath.ReadToEnd().Split("\r\n");
             var codes = unsortedCodes.Where(p => int.TryParse(p, out _)).ToArray();
 
             List<Card> cards = new();

@@ -16,11 +16,9 @@ namespace Yu_Gi_Oh_Card_Translator
         static string fontNameTypePath1 = AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Anticva.ttf";
         static string fontNameTypePath2 = AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Anticva1.ttf";
         static string fontNameTypePath3 = AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Anticva2.ttf";
-        static string fontDescPath = AppDomain.CurrentDomain.BaseDirectory + @"Fonts\Italic1.ttf";
+        static string fontDescPath = AppDomain.CurrentDomain.BaseDirectory + @"Fonts\Italic.ttf";
 
-        public static async Task DrawText(List<Card> cards)
-        {
-            Dictionary<string, string> spellType = new Dictionary<string, string>
+        private static Dictionary<string, string> spellType = new Dictionary<string, string>
             {
                 {"Continuous","[Непрерывный      ]"},
                 {"Counter","[Блокирующий      ]"},
@@ -30,7 +28,7 @@ namespace Yu_Gi_Oh_Card_Translator
                 {"Normal","[Обычный]"}
             };
 
-            Dictionary<string, string> monsterType = new()
+        private static Dictionary<string, string> monsterType = new()
             {
                 {"Effect","Эфект"},
                 {"Flip","Переворот"},
@@ -38,21 +36,19 @@ namespace Yu_Gi_Oh_Card_Translator
                 {"Normal","Обычный"},
             };
 
+        public static async Task DrawText(List<Card> cards)
+        {
             foreach (var card in cards)
             {
                 Color color = Color.Black;
-                var img = await Image.LoadAsync(@$"{DataDir}\{card.Code}.jpg");
+                using var img = await Image.LoadAsync(@$"{DataDir}\{card.Code}.jpg");
 
                 RichTextOptions[] options;
 
                 if (card.Type.Contains("Monster"))
-                {
                     options = CreateOptions(card, (new PointF(60, 895), new PointF(60, 922)));
-                }
-                else
-                {
+                else 
                     options = CreateOptions(card, (new PointF(732, 158), new PointF(60, 895)));
-                };
 
                 string typeText;
                 if (card.Type.Contains("Spell") || card.Type.Contains("Trap"))
@@ -60,15 +56,14 @@ namespace Yu_Gi_Oh_Card_Translator
                     color = Color.White;
                     typeText = spellType[card.Typing];
                     options[1].HorizontalAlignment = HorizontalAlignment.Right;
-                    //options[1].Dpi = 48;
                 }
                 else
                 {
+                    //TODO: ЗАМЕНИТЬ ИМЕНОВАННЫЕ КОНСТАНТЫ
                     typeText = @$"[{card.TranslatedTyping}/{monsterType[card.Type.Split()[0]]}]";
                     if (card.TranslatedText.Length > 299)
-                    {
-                        options[2].LineSpacing = 0.92f;
-                    }
+                        options[2].LineSpacing = 0.90f;
+                    
                 };
 
                 img.Mutate(x =>
@@ -105,7 +100,7 @@ namespace Yu_Gi_Oh_Card_Translator
 
             options[0] = new(fontName)
             {
-
+                
                 Origin = new PointF(60, 75), // Расположение текста
                 WrappingLength = 685, // Длинна строки
                 HorizontalAlignment = HorizontalAlignment.Left, // Выравнивание по сторонам
@@ -123,9 +118,9 @@ namespace Yu_Gi_Oh_Card_Translator
                 Origin = cordinates.description, // Расположение текста
                 WrappingLength = 692, // Длинна строки
                 HorizontalAlignment = HorizontalAlignment.Left, // Выравнивание по сторонам
-                TextJustification = TextJustification.InterWord, // Выравнивание по ширине
-                VerticalAlignment = VerticalAlignment.Top
+                TextJustification = TextJustification.InterCharacter, // Выравнивание по ширине
             };
+            
             return options;
         }
 

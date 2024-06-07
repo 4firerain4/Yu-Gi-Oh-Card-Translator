@@ -19,3 +19,4 @@ d:\WORK\Yu-Gi-Oh-Card-Translator\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 d:\WORK\Yu-Gi-Oh-Card-Translator\bin\Debug\net8.0\SixLabors.ImageSharp.Drawing.dll
 d:\WORK\Yu-Gi-Oh-Card-Translator\obj\Debug\net8.0\Yu-Gi-Oh-Card-Translator.csproj.CopyComplete
 d:\WORK\Yu-Gi-Oh-Card-Translator\bin\Debug\net8.0\HtmlAgilityPack.dll
+d:\WORK\Yu-Gi-Oh-Card-Translator\obj\Debug\net8.0\Yu-Gi-Oh-Card-Translator.sourcelink.json

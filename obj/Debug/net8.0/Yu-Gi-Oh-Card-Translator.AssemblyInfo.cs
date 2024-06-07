@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Yu-Gi-Oh-Card-Translator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dffe78c34a0f650535293001d95d09df7856f15")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+909a829726d1ef9ee739312fc9b01ae2ae529c67")]
 [assembly: System.Reflection.AssemblyProductAttribute("Yu-Gi-Oh-Card-Translator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Yu-Gi-Oh-Card-Translator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

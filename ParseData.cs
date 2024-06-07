@@ -1,6 +1,4 @@
 using GlobalUsings;
-
-
 using HtmlAgilityPack;
 
 namespace Yu_Gi_Oh_Card_Translator
